@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeLogin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Logo atas form -->
+    <div id="logo">
+        <div class="firstname">Fake</div>
+        <div class="lastname">Registration</div>
+    </div>
+    <!-- Logo end -->
+
+    <!-- sapaan awal -->
+    <div class="formulir" id="baseForm">
+        <div class="intro">
+            <div class="pembukaan">
+                <img src="assets/images/ramrem.gif" alt="" id="gambar1">
+                <img src="assets/images/daftar.gif" alt="" id="gambar5">
+            </div>
+
+            <div class="salam">
+                <h1 id="sapaan1">Hallo Semua Selamat Datang</h1>
+            </div>
+            <br>
+            <div class="daftar">
+                <p id="daftar">udah punya akun blom? kalau blom daftar dulu <button onclick="onDaftar()"
+                        id="clickButton">DISINI</button></p>
+            </div>
+        </div>
+        <!-- sapaan awal end -->
+
+        <!-- login -->
+        <div id="form">
+            <div class="aja">
+                <div class="apa">
+                    <label for="usenameInput" class="nama">
+                        <h3>Username</h3>
+                        <input type="text" placeholder="username/nama" id="usernameInput" class="isi" required>
+                    </label>
+                </div>
+                <br>
+                <div class="apa">
+                    <label for="passwordInput" class="pw">
+                        <h3>Password</h3>
+                        <input type="password" placeholder="Password" id="passwordInput" class="isi">
+                    </label>
+                </div>
+                <br>
+                <div class="apa">
+                    <label for="sexInput">
+                        <h3 class="aa">Gender</h3>
+                        <select name="pilih" id="sexInput" class="jk">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div class="tombol">
+                <button onclick="onLogin()" id="loginButton">Masuk</button>
+            </div>
+        </div>
+
+        <!-- login end -->
+
+        <!-- gambar-gambar atau sapaan  -->
+
+        <div class="content">
+            <h1 id="sapaan2">Hallo bro!!</h1>
+            <h1 id="sapaan3">Hallo Kakak Cantik/Dede gemes!!</h1>
+            <h1 id="sapaan4">Halo Admin</h1>
+            <h1 id="sapaan5">Halo Ayang I Love You</h1>
+            <p id="sapaanAdmin">Sebagai admin anda bisa melihat-lihat yg lain</p>
+            <img src="assets/images/halogif.gif" alt="" id="gambar2">
+            <img src="assets/images/hallo2.gif" alt="" id="gambar3">
+            <img src="assets/images/tenor.gif" alt="" id="gambar4">
+
+            <!-- gambar end -->
+
+            <button id="logoutButton" onclick="onLogout()">Keluar</button>
+
+            <!-- daftar -->
+
+            <div id="regis">
+                <div class="pendaftaran">
+                    <label for="register">
+                        <h3>Username</h3>
+                        <input type="text" name="Registration" id="register" placeholder="usename" class="bb" required>
+                    </label>
+                </div>
+                <br>
+                <div class="pendaftaran">
+                    <label for="pass">
+                        <h3>Password</h3>
+                        <input type="password" name="password" id="pass" placeholder="pw" class="bb" required>
+                    </label>
+                </div>
+                <br>
+                <div class="pendaftaran">
+                    <label for="confirmPass">
+                        <h3>Confirm Password</h3>
+                        <input type="password" name="corm" id="confirmPass" placeholder="confirm" class="bb" required>
+                    </label>
+                </div>
+                <br>
+                <div class="tombol2">
+                    <button onclick="onRegister()" id="registerButton">DAFTAR</button>
+                </div>
+                <div>
+                    <button onclick="onKeluar()" id="keluarButton">KELUAR</button>
+                </div>
+            </div>
+            <!-- daftar end -->
+
+            <!-- untuk admin -->
+
+            <div id="justAdmin">
+                <div class="admin">
+                    <p class="p">Jika ingin melihat apa yg ada di dalam 'male' klik<button onclick="onMale()" id="maleButton">ini</button>
+                    </p>
+                </div>
+                <br><br>
+                <div class="admin">
+                    <p class="p">Jika ingin melihat apa yg ada di dalam 'female' klik<button onclick="onFemale()" id="femaleButton">ini</button></p>
+                </div>
+                <br><br>
+                <div class="admin">
+                    <p class="p">Jika ingin melihat apa yg ada di dalam 'khusus' klik<button onclick="onKhusus()" id="khususButton">ini</button></p>
+                </div>
+                <br><br>
+                <div class="admin">
+                    <p class="p">Jika ingin kembali kesini refresh aja</p>
+                </div>
+            </div>
+
+
+
+
+            <!-- end -->
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="footer">
+        <h3>©Website Fake</h3>
+    </div>
+    <script type="application/javascript" src="script.js"></script>
+</body>
+
+</html>
