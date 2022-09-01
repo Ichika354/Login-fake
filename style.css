@@ -44,6 +44,9 @@ body {
   height: 70vh;
   position: relative;
   left: 25%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 button {
@@ -205,22 +208,22 @@ button {
 }
 
 .admin {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .admin button {
-    width: 25px;
-    background-color: transparent;
-    border: none;
-    color: red;
+  width: 25px;
+  background-color: transparent;
+  border: none;
+  color: red;
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
-    color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  color: aliceblue;
 }
 
 @media (max-width: 450px) {
@@ -270,5 +273,9 @@ button {
   .content img {
     width: 70%;
     margin-bottom: 1em;
+  }
+
+  .sapaan .g {
+    width: 50%;
   }
 }
