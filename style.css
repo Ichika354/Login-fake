@@ -215,6 +215,14 @@ button {
     color: red;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    color: aliceblue;
+}
+
 @media (max-width: 450px) {
   .container {
     display: block;

@@ -41,6 +41,11 @@ function onRegis() {
   localStorage.setItem("role", "new");
   if (registerInput.value !== "" && passInput.value == confirmInput.value) {
     alert("Akun baru berhasil terbuat");
+    intro.style.display = "flex";
+    form.style.display = "flex";
+    daftar.style.display = "flex";
+    secondIntro.style.display = "none";
+    regis.style.display = "none";
   } else {
     alert("ada yang salah tuh");
   }
@@ -55,24 +60,24 @@ function onKembali() {
 }
 
 function onMale() {
-    content.style.display = "flex";
-    sapaanMale.style.display = "flex"
-    sapaanAdmin.style.display = "none"
-    admin.style.display = "none"
+  content.style.display = "flex";
+  sapaanMale.style.display = "flex";
+  sapaanAdmin.style.display = "none";
+  admin.style.display = "none";
 }
 
 function onFemale() {
-    content.style.display = "flex";
-    sapaanFemale.style.display = "flex"
-    sapaanAdmin.style.display = "none"
-    admin.style.display = "none"
+  content.style.display = "flex";
+  sapaanFemale.style.display = "flex";
+  sapaanAdmin.style.display = "none";
+  admin.style.display = "none";
 }
 
 function onKhusus() {
-    content.style.display = "flex";
-    sapaanKhusus.style.display = "flex"
-    sapaanAdmin.style.display = "none"
-    admin.style.display = "none"
+  content.style.display = "flex";
+  sapaanKhusus.style.display = "flex";
+  sapaanAdmin.style.display = "none";
+  admin.style.display = "none";
 }
 
 function onLogin() {
