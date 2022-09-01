@@ -1,158 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FakeLogin</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Logo atas form -->
     <div id="logo">
-        <div class="firstname">Fake</div>
-        <div class="lastname">Registration</div>
+      <div class="firstname">Fake</div>
+      <div class="lastname">Registration</div>
     </div>
     <!-- Logo end -->
 
     <!-- sapaan awal -->
-    <div class="formulir" id="baseForm">
-        <div class="intro">
-            <div class="pembukaan">
-                <img src="assets/images/ramrem.gif" alt="" id="gambar1">
-                <img src="assets/images/daftar.gif" alt="" id="gambar5">
-            </div>
 
-            <div class="salam">
-                <h1 id="sapaan1">Hallo Semua Selamat Datang</h1>
-            </div>
-            <br>
-            <div class="daftar">
-                <p id="daftar">udah punya akun blom? kalau blom daftar dulu <button onclick="onDaftar()"
-                        id="clickButton">DISINI</button></p>
-            </div>
+    <div class="container">
+      <div class="intro" id="intro">
+        <img src="assets/images/ramrem.gif" />
+        <h1>Hallo Semua Selamat Datang</h1>
+      </div>
+      <div class="secondintro" id="secondIntro">
+        <img src="assets/images/daftar.gif" />
+        <h1>Hallo, Daftar dulu yuk😉</h1>
+      </div>
+
+      <!-- sapaan awal end -->
+
+      <!-- login -->
+
+      <div class="form" id="form">
+        <table>
+          <tr>
+            <td>
+              <label for="usernameInput">Username</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="a">
+              <input type="text" placeholder="your username" id="usernameInput" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="passwordInput">Password</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="a">
+              <input type="password" placeholder="your password" id="passwordInput" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="genderInput">Gender</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select id="genderInput">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="loginButton" onclick="onLogin()">LOGIN</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="regis" id="regis">
+        <table>
+          <tr>
+            <td>
+              <label for="registerInput">Username</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="a">
+              <input type="text" placeholder="your username" id="registerInput" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="passInput">Password</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="a">
+              <input type="password" placeholder="your password" id="passInput" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="confirmInput">Confirm</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="a"> 
+              <input type="password" placeholder="confirm your password" id="confirmInput" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="kembaliButton" onclick="onKembali()">KEMBALI</button>
+              <button id="regisButton" onclick="onRegis()">BUAT</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="daftar" id="daftar">
+        <p>udah punya akun blom? kalau blom daftar dulu <button onclick="onDaftar()" id="clickButton">DISINI</button></p>
+      </div>
+      <!-- login end -->
+
+      <!-- gambar-gambar atau sapaan  -->
+      <div class="content" id="content">
+        <div class="sapaan" id="sapaanMale">
+          <h1>Hallo bro!!</h1>
+          <img src="assets/images/hallo2.gif" alt="" />
         </div>
-        <!-- sapaan awal end -->
-
-        <!-- login -->
-        <div id="form">
-            <div class="aja">
-                <div class="apa">
-                    <label for="usenameInput" class="nama">
-                        <h3>Username</h3>
-                        <input type="text" placeholder="username/nama" id="usernameInput" class="isi" required>
-                    </label>
-                </div>
-                <br>
-                <div class="apa">
-                    <label for="passwordInput" class="pw">
-                        <h3>Password</h3>
-                        <input type="password" placeholder="Password" id="passwordInput" class="isi">
-                    </label>
-                </div>
-                <br>
-                <div class="apa">
-                    <label for="sexInput">
-                        <h3 class="aa">Gender</h3>
-                        <select name="pilih" id="sexInput" class="jk">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </label>
-                </div>
-            </div>
-            <br>
-            <div class="tombol">
-                <button onclick="onLogin()" id="loginButton">LOGIN</button>
-            </div>
+        <div class="sapaan" id="sapaanFemale">
+          <h1>Hallo Kakak Cantikk!!</h1>
+          <img src="assets/images/hallo.gif" alt="" />
         </div>
-
-        <!-- login end -->
-
-        <!-- gambar-gambar atau sapaan  -->
-
-        <div class="content">
-            <h1 id="sapaan2">Hallo bro!!</h1>
-            <h1 id="sapaan3">Hallo Kakak Cantik/Dede gemes!!</h1>
-            <h1 id="sapaan4">Halo Admin</h1>
-            <h1 id="sapaan5">Halo Ayang I Love You</h1>
-            <p id="sapaanAdmin">Sebagai admin anda bisa melihat-lihat yg lain</p>
-            <img src="assets/images/halogif.gif" alt="" id="gambar2">
-            <img src="assets/images/hallo2.gif" alt="" id="gambar3">
-            <img src="assets/images/tenor.gif" alt="" id="gambar4">
-
-            <!-- gambar end -->
-
-            <button id="logoutButton" onclick="onLogout()">LOGOUT</button>
-
-            <!-- daftar -->
-
-            <div id="regis">
-                <div class="pendaftaran">
-                    <label for="register">
-                        <h3>Username</h3>
-                        <input type="text" name="Registration" id="register" placeholder="usename" class="bb" required>
-                    </label>
-                </div>
-                <br>
-                <div class="pendaftaran">
-                    <label for="pass">
-                        <h3>Password</h3>
-                        <input type="password" name="password" id="pass" placeholder="pw" class="bb" required>
-                    </label>
-                </div>
-                <br>
-                <div class="pendaftaran">
-                    <label for="confirmPass">
-                        <h3>Confirm Password</h3>
-                        <input type="password" name="corm" id="confirmPass" placeholder="confirm" class="bb" required>
-                    </label>
-                </div>
-                <br>
-                <div class="tombol2">
-                    <button onclick="onRegister()" id="registerButton">REGIS</button>
-                </div>
-                <div>
-                    <button onclick="onKeluar()" id="keluarButton">BACK</button>
-                </div>
-            </div>
-            <!-- daftar end -->
-
-            <!-- untuk admin -->
-
-            <div id="justAdmin">
-                <div class="admin">
-                    <p class="p">Jika ingin melihat apa yg ada di dalam 'male' klik<button onclick="onMale()" id="maleButton">ini</button>
-                    </p>
-                </div>
-                <br><br>
-                <div class="admin">
-                    <p class="p">Jika ingin melihat apa yg ada di dalam 'female' klik<button onclick="onFemale()" id="femaleButton">ini</button></p>
-                </div>
-                <br><br>
-                <div class="admin">
-                    <p class="p">Jika ingin melihat apa yg ada di dalam 'khusus' klik<button onclick="onKhusus()" id="khususButton">ini</button></p>
-                </div>
-                <br><br>
-                <div class="admin">
-                    <p class="p">Jika ingin kembali kesini refresh aja</p>
-                </div>
-            </div>
-
-
-
-
-            <!-- end -->
+        <div class="sapaan" id="sapaanKhusus">
+          <h1>Hallo Ayang I lovee youu!!</h1>
+          <img src="assets/images/deca3269fd13985731823696b41b437b78aefd4d_hq.gif" alt="" />
         </div>
+        <div class="sapaanAdmin" id="sapaanAdmin">
+          <h1>Hallo Admin</h1>
+          <p>Sebagai admin anda bisa melihat-lihat yang lain</p>
+        </div>
+        <div id="admin">
+          <div class="admin">
+            <p class="p">Jika ingin melihat apa yg ada di dalam 'male' klik<button onclick="onMale()" id="maleButton">ini</button></p>
+          </div>
+          <br /><br />
+          <div class="admin">
+            <p class="p">Jika ingin melihat apa yg ada di dalam 'female' klik<button onclick="onFemale()" id="femaleButton">ini</button></p>
+          </div>
+          <br /><br />
+          <div class="admin">
+            <p class="p">Jika ingin melihat apa yg ada di dalam 'khusus' klik<button onclick="onKhusus()" id="khususButton">ini</button></p>
+          </div>
+          <br /><br />
+          <div class="admin">
+            <p class="p">Jika ingin kembali kesini refresh aja</p>
+          </div>
+        </div>
+        <div class="buttonlogout" id="logoutButton">
+          <button onclick="onLogout()">LOGOUT</button>
+        </div>
+      </div>
+      <!-- gambar-gambar atau sapaan end -->
     </div>
 
     <!-- footer  -->
-    <div class="footer">
+    <!-- <div class="footer">
         <h3>©Website Fake</h3>
-    </div>
-    <script type="application/javascript" src="script.js"></script>
-</body>
+    </div> -->
 
+    <script type="application/javascript" src="script.js"></script>
+  </body>
 </html>
