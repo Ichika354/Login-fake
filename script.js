@@ -185,8 +185,8 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     secondIntro.style.display = "none";
     regis.style.display = "none";
     content.style.display = "flex";
-    sapaanMale.style.display = "flex";
-    sapaanFemale.style.display = "none";
+    sapaanMale.style.display = "none";
+    sapaanFemale.style.display = "flex";
     sapaanKhusus.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
@@ -197,8 +197,8 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     secondIntro.style.display = "none";
     regis.style.display = "none";
     content.style.display = "flex";
-    sapaanMale.style.display = "none";
-    sapaanFemale.style.display = "flex";
+    sapaanMale.style.display = "flex";
+    sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
