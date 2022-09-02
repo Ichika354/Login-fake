@@ -145,7 +145,7 @@ function onLogin() {
     sapaanKhusus.style.display = "none";
     sapaanAdmin.style.display = "flex";
     admin.style.display = "block";
-  } else if (usernameInput.value == "Ayang" && passwordInput.value == "ayang123" && genderInput.value == "female") {
+  } else if (usernameInput.value == "Nailailan" && passwordInput.value == "nailailan123" && genderInput.value == "female") {
     localStorage.setItem("Username", usernameInput.value);
     localStorage.setItem("Password", passwordInput.value);
     localStorage.setItem("Gender", genderInput.value);
