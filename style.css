@@ -179,6 +179,45 @@ button {
   margin-bottom: 1em;
 }
 
+#sapaanMale img {
+  width: 50%;
+}
+
+.formcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.btn-kirim {
+  margin-top: 1em;
+  width: 30%;
+}
+
+#sapaanBestie img {
+  margin-top: 2em;
+  width: 60%;
+}
+
+.gambar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#pesan img {
+  margin-top: 2em;
+  width: 40%;
+}
+
+.masuk button {
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  border: none;
+}
+
 .buttonlogout {
   width: 100%;
   display: flex;
@@ -275,7 +314,20 @@ button {
     margin-bottom: 1em;
   }
 
+  #sapaanMale img {
+    width: 70%;
+  }
+
   .sapaan .g {
     width: 50%;
   }
-}
+  
+  #sapaanBestie img {
+    margin-top: 6em;
+    width: 80%;
+  }
+  
+  #pesan img {
+    margin-top: 5em;
+    width: 60%;
+  }

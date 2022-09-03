@@ -8,6 +8,7 @@ let content = document.getElementById("content");
 let sapaanMale = document.getElementById("sapaanMale");
 let sapaanFemale = document.getElementById("sapaanFemale");
 let sapaanKhusus = document.getElementById("sapaanKhusus");
+let sapaanBetie = document.getElementById("sapaanBestie");
 let sapaanAdmin = document.getElementById("sapaanAdmin");
 let admin = document.getElementById("admin");
 
@@ -18,14 +19,36 @@ let registerInput = document.getElementById("registerInput");
 let passInput = document.getElementById("passInput");
 let confirmInput = document.getElementById("confirmInput");
 
+let formContent = document.getElementById("formContent");
+let pesanAyang = document.getElementById("pesanAyang");
+let pesan = document.getElementById("pesan");
+let masukPesan = document.getElementById("masukPesan");
+let formContent2 = document.getElementById("formContent2");
+let pesanBestie = document.getElementById("pesanBestie");
+let pesan2 = document.getElementById("pesan2");
+let masukPesan2 = document.getElementById("masukPesan2");
+
+let backButton = document.getElementById("backButton");
+
+// form.style.display = "none";
+// intro.style.display = "none";
+// daftar.style.display = "none";
+
 secondIntro.style.display = "none";
 regis.style.display = "none";
 content.style.display = "none";
 sapaanMale.style.display = "none";
 sapaanFemale.style.display = "none";
 sapaanKhusus.style.display = "none";
+formContent.style.display = "none";
+pesan.style.display = "none";
+sapaanBetie.style.display = "none";
+formContent2.style.display = "none";
+pesan2.style.display = "none";
 sapaanAdmin.style.display = "none";
 admin.style.display = "none";
+
+backButton.style.display = "none";
 
 function onDaftar() {
   intro.style.display = "none";
@@ -80,6 +103,24 @@ function onKhusus() {
   admin.style.display = "none";
 }
 
+function onAyang() {}
+
+function onBestie() {
+  content.style.display = "flex";
+  formContent2.style.display = "none";
+  masukPesan2.style.display = "none";
+  pesan2.style.display = "flex";
+  backButton.style.display = "flex";
+}
+
+function onBack() {
+  content.style.display = "flex";
+  formContent2.style.display = "flex";
+  masukPesan2.style.display = "flex";
+  pesan2.style.display = "none";
+  backButton.style.display = "none";
+}
+
 function onLogin() {
   if (usernameInput.value == localStorage.getItem("Username") && passwordInput.value == localStorage.getItem("Password") && genderInput.value == "male") {
     localStorage.setItem("Username", usernameInput.value);
@@ -95,6 +136,11 @@ function onLogin() {
     sapaanMale.style.display = "flex";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
   } else if (usernameInput.value == localStorage.getItem("Username") && passwordInput.value == localStorage.getItem("Password") && genderInput.value == "female") {
@@ -111,6 +157,11 @@ function onLogin() {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "flex";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
   } else if (usernameInput.value == "Admin" && passwordInput.value == "admin123" && genderInput.value == "male") {
@@ -127,6 +178,11 @@ function onLogin() {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "flex";
     admin.style.display = "block";
   } else if (usernameInput.value == "Admin" && passwordInput.value == "admin123" && genderInput.value == "female") {
@@ -143,9 +199,14 @@ function onLogin() {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "flex";
     admin.style.display = "block";
-  } else if (usernameInput.value == "Nailailan" && passwordInput.value == "nailailan123" && genderInput.value == "female") {
+  } else if (usernameInput.value == "Naila Ilan Novina" && passwordInput.value == "101103" && genderInput.value == "female") {
     localStorage.setItem("Username", usernameInput.value);
     localStorage.setItem("Password", passwordInput.value);
     localStorage.setItem("Gender", genderInput.value);
@@ -159,6 +220,32 @@ function onLogin() {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "flex";
+    formContent.style.display = "none";
+    pesan.style.display = "flex";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
+    sapaanAdmin.style.display = "none";
+    admin.style.display = "none";
+  } else if (usernameInput.value == "Shelly Marchelani" && passwordInput.value == "171003" && genderInput.value == "female") {
+    localStorage.setItem("Username", usernameInput.value);
+    localStorage.setItem("Password", passwordInput.value);
+    localStorage.setItem("Gender", genderInput.value);
+    localStorage.setItem("role", "Bestie");
+    intro.style.display = "none";
+    form.style.display = "none";
+    daftar.style.display = "none";
+    secondIntro.style.display = "none";
+    regis.style.display = "none";
+    content.style.display = "flex";
+    sapaanMale.style.display = "none";
+    sapaanFemale.style.display = "none";
+    sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "flex";
+    formContent2.style.display = "flex";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
   } else {
@@ -176,6 +263,11 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
   sapaanMale.style.display = "flex";
   sapaanFemale.style.display = "flex";
   sapaanKhusus.style.display = "flex";
+  formContent.style.display = "none";
+  pesan.style.display = "flex";
+  sapaanBetie.style.display = "flex";
+  formContent2.style.display = "flex";
+  pesan2.style.display = "flex";
   sapaanAdmin.style.display = "flex";
   admin.style.display = "flex";
   if (localStorage.getItem("role") == "new" && genderInput.value == "male") {
@@ -188,6 +280,11 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "flex";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
   } else if (localStorage.getItem("role") == "new" && genderInput.value == "female") {
@@ -200,6 +297,11 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     sapaanMale.style.display = "flex";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
   } else if (localStorage.getItem("role") == "Adminlaki-laki") {
@@ -212,6 +314,11 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "flex";
     admin.style.display = "block";
   } else if (localStorage.getItem("role") == "Admincewe") {
@@ -224,6 +331,11 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "flex";
     admin.style.display = "block";
   } else if (localStorage.getItem("role") == "Khusus") {
@@ -236,6 +348,28 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "flex";
+    formContent.style.display = "none";
+    pesan.style.display = "flex";
+    sapaanBetie.style.display = "none";
+    formContent2.style.display = "none";
+    pesan2.style.display = "none";
+    sapaanAdmin.style.display = "none";
+    admin.style.display = "none";
+  } else if (localStorage.getItem("role") == "Bestie") {
+    intro.style.display = "none";
+    form.style.display = "none";
+    daftar.style.display = "none";
+    secondIntro.style.display = "none";
+    regis.style.display = "none";
+    content.style.display = "flex";
+    sapaanMale.style.display = "none";
+    sapaanFemale.style.display = "none";
+    sapaanKhusus.style.display = "none";
+    formContent.style.display = "none";
+    pesan.style.display = "none";
+    sapaanBetie.style.display = "flex";
+    formContent2.style.display = "flex";
+    pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
   }

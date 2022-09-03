@@ -123,15 +123,46 @@
       <div class="content" id="content">
         <div class="sapaan" id="sapaanMale">
           <h1>Hallo bro!!</h1>
-          <img src="assets/images/hallo2.gif" alt="" />
+          <img src="assets/images/tenor (1).gif" alt="" />
         </div>
         <div class="sapaan" id="sapaanFemale">
           <h1>Hallo Kakak Cantikk!!</h1>
           <img src="assets/images/hallo.gif" class="g" />
         </div>
         <div class="sapaan" id="sapaanKhusus">
-          <h1>Hallo Nailaaa semangatt kuliahhnyaa!!</h1>
-          <img src="assets/images/deca3269fd13985731823696b41b437b78aefd4d_hq.gif" alt="" />
+          <div class="formcontent" id="formContent">
+            <h1>Kasih aku pesan Biii :</h1>
+            <form name="submit-to-google-sheet">
+              <textarea name="pesan" id="pesanAyang" rows="6" cols="30" required></textarea>
+              <button type="submit" class="btn-kirim">KIRIM</button>
+            </form>
+            <div class="masuk" id="masukPesan">
+              <h3>Liat pesan aku buat kamu klik <button onclick="onAyang()">DISINI</button></h3>
+            </div>
+          </div>
+          <div class="gambar" id="pesan">
+            <h1>Hallo Nailaaa semangatt kuliahhnyaa!!</h1>
+            <img src="assets/images/deca3269fd13985731823696b41b437b78aefd4d_hq.gif" alt="" />
+          </div>
+        </div>
+        <div class="sapaan" id="sapaanBestie">
+          <div class="formcontent" id="formContent2">
+            <form name="submit-to-google-sheet">
+              <label for="pesanBestie"> <h1>Kasih aku pesan shell :</h1></label>
+              <textarea name="pesan" id="pesanBestie" rows="6" cols="40" required>Jangan dulu di isi belom bisa ke kirim ke aku</textarea>
+              <button type="submit" class="btn-kirim">KIRIM</button>
+            </form>
+          </div>
+          <div class="masuk" id="masukPesan2">
+            <h3>Liat pesan aku buat kamu klik <button onclick="onBestie()">DISINI</button></h3>
+          </div>
+          <div class="gambar" id="pesan2">
+            <h1>Hallo Shelly !! Semangattt Kuliahnyaa <3.</h1>
+            <img src="assets/images/hyouka.gif" alt="" />
+          </div>
+          <div class="kembali" id="backButton">
+            <button onclick="onBack()">KEMBALI</button>
+          </div>
         </div>
         <div class="sapaanAdmin" id="sapaanAdmin">
           <h1>Hallo Admin</h1>
@@ -167,5 +198,16 @@
     </div>
 
     <script type="application/javascript" src="script.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbz2nifmiMsEafLSMSTmXB6l7Sdn_WLmgLlPcjmTeofyBjQw1UbM5gWwvkd3Je7vKc4a0w/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
