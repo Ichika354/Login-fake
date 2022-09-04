@@ -29,6 +29,7 @@ let pesan2 = document.getElementById("pesan2");
 let masukPesan2 = document.getElementById("masukPesan2");
 
 let backButton = document.getElementById("backButton");
+let bckButton = document.getElementById("bckButton");
 
 // form.style.display = "none";
 // intro.style.display = "none";
@@ -49,6 +50,7 @@ sapaanAdmin.style.display = "none";
 admin.style.display = "none";
 
 backButton.style.display = "none";
+bckButton.style.display = "none";
 
 function onDaftar() {
   intro.style.display = "none";
@@ -103,7 +105,13 @@ function onKhusus() {
   admin.style.display = "none";
 }
 
-function onAyang() {}
+function onAyang() {
+  content.style.display = "flex";
+  formContent.style.display = "none";
+  masukPesan.style.display = "none";
+  pesan.style.display = "flex";
+  bckButton.style.display = "flex";
+}
 
 function onBestie() {
   content.style.display = "flex";
@@ -119,6 +127,14 @@ function onBack() {
   masukPesan2.style.display = "flex";
   pesan2.style.display = "none";
   backButton.style.display = "none";
+}
+
+function onBck() {
+  content.style.display = "flex";
+  formContent.style.display = "flex";
+  masukPesan.style.display = "flex";
+  pesan.style.display = "none";
+  bckButton.style.display = "none";
 }
 
 function onLogin() {
@@ -220,14 +236,14 @@ function onLogin() {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "flex";
-    formContent.style.display = "none";
-    pesan.style.display = "flex";
+    formContent.style.display = "flex";
+    pesan.style.display = "none";
     sapaanBetie.style.display = "none";
     formContent2.style.display = "none";
     pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
-  } else if (usernameInput.value == "Shelly Marchelani" && passwordInput.value == "171003" && genderInput.value == "female") {
+  } else if (usernameInput.value == "Shelly " && passwordInput.value == "171003" && genderInput.value == "female") {
     localStorage.setItem("Username", usernameInput.value);
     localStorage.setItem("Password", passwordInput.value);
     localStorage.setItem("Gender", genderInput.value);
@@ -348,8 +364,8 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "flex";
-    formContent.style.display = "none";
-    pesan.style.display = "flex";
+    formContent.style.display = "flex";
+    pesan.style.display = "none";
     sapaanBetie.style.display = "none";
     formContent2.style.display = "none";
     pesan2.style.display = "none";

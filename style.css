@@ -265,10 +265,14 @@ button {
   color: aliceblue;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 450px) { 
+  #logo {
+    height: 10vh;
+  }
   .container {
     display: block;
     left: 0%;
+    height: 85vh;
     width: 100%;
     flex-wrap: wrap;
   }
@@ -280,7 +284,6 @@ button {
   }
 
   .intro img {
-    padding-top: 0%;
     width: 45%;
   }
 
@@ -330,4 +333,8 @@ button {
   #pesan img {
     margin-top: 5em;
     width: 60%;
+  }
+
+  .footer {
+    height: 5vh;
   }
