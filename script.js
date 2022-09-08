@@ -101,6 +101,15 @@ function onFemale() {
 function onKhusus() {
   content.style.display = "flex";
   sapaanKhusus.style.display = "flex";
+  formContent.style.display = "flex";
+  sapaanAdmin.style.display = "none";
+  admin.style.display = "none";
+}
+
+function onBest() {
+  content.style.display = "flex";
+  sapaanBetie.style.display = "flex";
+  formContent2.style.display = "flex";
   sapaanAdmin.style.display = "none";
   admin.style.display = "none";
 }

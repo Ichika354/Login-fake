@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/gif" href="assets/images/original.gif">
     <title>FakeLogin</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -74,6 +75,11 @@
           </tr>
         </table>
       </div>
+
+      <!-- login end -->
+
+      <!-- Daftar -->
+
       <div class="regis" id="regis">
         <table>
           <tr>
@@ -117,18 +123,32 @@
       <div class="daftar" id="daftar">
         <p>udah punya akun blom? kalau blom daftar dulu <button onclick="onDaftar()" id="clickButton">DISINI</button></p>
       </div>
-      <!-- login end -->
+
+      <!-- Daftar end -->
 
       <!-- gambar-gambar atau sapaan  -->
+
       <div class="content" id="content">
+        <!-- Sapaan laki2 -->
+
         <div class="sapaan" id="sapaanMale">
           <h1>Hallo bro!!</h1>
           <img src="assets/images/tenor (1).gif" alt="" />
         </div>
+
+        <!-- Sapaan laki2 end -->
+
+        <!-- Sapaan perempuan -->
+
         <div class="sapaan" id="sapaanFemale">
           <h1>Hallo Kakak Cantikk!!</h1>
           <img src="assets/images/hallo.gif" class="g" />
         </div>
+
+        <!-- Sapaan perempuan end -->
+
+        <!-- Sapaan Khusus -->
+
         <div class="sapaan" id="sapaanKhusus">
           <div class="formcontent" id="formContent">
             <h1>Kasih aku pesan Biii :</h1>
@@ -148,6 +168,11 @@
             <button onclick="onBck()">KEMBALI</button>
           </div>
         </div>
+
+        <!-- Sapaan Khusus end -->
+
+        <!-- Sapaan bestie -->
+
         <div class="sapaan" id="sapaanBestie">
           <div class="formcontent" id="formContent2">
             <form name="submit-to-google-sheet">
@@ -167,6 +192,11 @@
             <button onclick="onBack()">KEMBALI</button>
           </div>
         </div>
+
+        <!-- Sapaan bestie end -->
+
+        <!-- Sapaan admin -->
+
         <div class="sapaanAdmin" id="sapaanAdmin">
           <h1>Hallo Admin</h1>
           <p>Sebagai admin anda bisa melihat-lihat yang lain</p>
@@ -185,6 +215,10 @@
           </div>
           <br /><br />
           <div class="admin">
+            <p class="p">Jika ingin melihat apa yg ada di dalam 'bestie' klik<button onclick="onBest()" id="khususButton">ini</button></p>
+          </div>
+          <br /><br />
+          <div class="admin">
             <p class="p">Jika ingin kembali kesini refresh aja</p>
           </div>
         </div>
@@ -192,13 +226,20 @@
           <button onclick="onLogout()">LOGOUT</button>
         </div>
       </div>
-      <!-- gambar-gambar atau sapaan end -->
+
+      <!-- Sapaan admin -->
+      
     </div>
 
-    <!-- footer  -->
+    <!-- gambar-gambar atau sapaan end -->
+
+    <!-- footer -->
+
     <div class="footer">
       <h3>©Website Fake</h3>
     </div>
+
+    <!-- footer end -->
 
     <script type="application/javascript" src="script.js"></script>
     <script>
