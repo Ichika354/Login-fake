@@ -64,16 +64,20 @@ function onRegis() {
   localStorage.setItem("Username", registerInput.value);
   localStorage.setItem("Password", confirmInput.value);
   localStorage.setItem("role", "new");
-  if (registerInput.value !== "" && passInput.value == confirmInput.value) {
+  if (registerInput.value !== "" && passInput.value.length == 5 && confirmInput.value.length == 5) {
     alert("Akun baru berhasil terbuat");
     intro.style.display = "flex";
     form.style.display = "flex";
     daftar.style.display = "flex";
     secondIntro.style.display = "none";
     regis.style.display = "none";
-  } else {
+  } else if (passInput.value.length < 5 && confirmInput.value.length < 5) {
+    alert("Jangan kurang dari 5 atuh kamu mah");
+  } 
+  else {
     alert("ada yang salah tuh");
   }
+  
 }
 
 function onKembali() {
@@ -273,7 +277,10 @@ function onLogin() {
     pesan2.style.display = "none";
     sapaanAdmin.style.display = "none";
     admin.style.display = "none";
-  } else {
+  } else if (usernameInput.value.length == 0 && passInput.value.length == 0) {
+    alert("Mohon untuk di isi yaaa masa iya mau login tapi ga di isi heheh");
+  } 
+  else {
     alert("Kayaknya salah deh atau blom bikin akun?");
   }
 }
@@ -302,8 +309,8 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     secondIntro.style.display = "none";
     regis.style.display = "none";
     content.style.display = "flex";
-    sapaanMale.style.display = "none";
-    sapaanFemale.style.display = "flex";
+    sapaanMale.style.display = "flex";
+    sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
     formContent.style.display = "none";
     pesan.style.display = "none";
@@ -319,8 +326,8 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     secondIntro.style.display = "none";
     regis.style.display = "none";
     content.style.display = "flex";
-    sapaanMale.style.display = "flex";
-    sapaanFemale.style.display = "none";
+    sapaanMale.style.display = "none";
+    sapaanFemale.style.display = "flex";
     sapaanKhusus.style.display = "none";
     formContent.style.display = "none";
     pesan.style.display = "none";
