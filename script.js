@@ -31,6 +31,9 @@ let masukPesan2 = document.getElementById("masukPesan2");
 let backButton = document.getElementById("backButton");
 let bckButton = document.getElementById("bckButton");
 
+const male = document.getElementById("male");
+const female = document.getElementById("female");
+
 // form.style.display = "none";
 // intro.style.display = "none";
 // daftar.style.display = "none";
@@ -163,6 +166,7 @@ function onLogin() {
     regis.style.display = "none";
     content.style.display = "flex";
     sapaanMale.style.display = "flex";
+    male.textContent = "Halooo" + " " + localStorage.getItem("Username");
     sapaanFemale.style.display = "none";
     sapaanKhusus.style.display = "none";
     formContent.style.display = "none";
@@ -185,6 +189,7 @@ function onLogin() {
     content.style.display = "flex";
     sapaanMale.style.display = "none";
     sapaanFemale.style.display = "flex";
+    female.textContent = "Halooo" + " " + localStorage.getItem("Username") + "Cantik";
     sapaanKhusus.style.display = "none";
     formContent.style.display = "none";
     pesan.style.display = "none";
@@ -309,8 +314,9 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     secondIntro.style.display = "none";
     regis.style.display = "none";
     content.style.display = "flex";
-    sapaanMale.style.display = "flex";
-    sapaanFemale.style.display = "none";
+    sapaanMale.style.display = "none";
+    sapaanFemale.style.display = "flex";
+    female.textContent = "Halooo" + " " + localStorage.getItem("Username") + " Cantik";
     sapaanKhusus.style.display = "none";
     formContent.style.display = "none";
     pesan.style.display = "none";
@@ -326,8 +332,9 @@ if (localStorage.getItem("Username", "Password", "Gender")) {
     secondIntro.style.display = "none";
     regis.style.display = "none";
     content.style.display = "flex";
-    sapaanMale.style.display = "none";
-    sapaanFemale.style.display = "flex";
+    sapaanMale.style.display = "flex";
+    sapaanFemale.style.display = "none";
+    male.textContent = "Halooo" + " " + localStorage.getItem("Username");
     sapaanKhusus.style.display = "none";
     formContent.style.display = "none";
     pesan.style.display = "none";
@@ -411,3 +418,4 @@ function onLogout() {
   localStorage.clear();
   location.reload();
 }
+
