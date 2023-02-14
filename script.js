@@ -240,7 +240,7 @@ function onLogin() {
     pesan2.style.display = "none";
     sapaanAdmin.style.display = "flex";
     admin.style.display = "block";
-  } else if (usernameInput.value == "Naila Ilan Novina" && passwordInput.value == "101103" && genderInput.value == "female") {
+  } else if (usernameInput.value == "Ghaida Fasya" && passwordInput.value == "13062004" && genderInput.value == "female") {
     localStorage.setItem("Username", usernameInput.value);
     localStorage.setItem("Password", passwordInput.value);
     localStorage.setItem("Gender", genderInput.value);
